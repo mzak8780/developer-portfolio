@@ -1,19 +1,34 @@
 import React from "react";
+import Header from "./Header";
 
 function Intro() {
-    return (
-        <div className="flex items-center justify-center flex-col text-center pt-20 pb-6">
-            <h1 className="text-4xl md:text-7xl mb-1 md:mb-3 font-bold text-pink-500">
-                Maksymilian Zak
-            </h1>
-            <p className="text-base md:text-xl mb-3 font-medium text-gray-700">
-                Mechatronic Engineer & Software Developer
-            </p>
-            <p className="flex flex-col md:text-xl mb-3 font-medium text-gray-800">
-                I am a graduate mechatronic engineer/project manager who values hard work and dedication. Beginning my career through technology consulting, I am interlacing my communication skills with my technical knowledge to provide quality solutions to clients. I am fascinated about the world of technology and strive to develop my skills and expertise within the field. I am a critical thinker and incorporate logic and innovation during problem-solving. The combination of my degree allows me to approach tasks from both qualitative and quantitative perspectives, utilizing technical knowledge alongside evolved interpersonal skills to achieve set out objectives.
-            </p>
-        </div>
-    );
+  return (
+    <div className="relative flex bg-base-content text-white items-center justify-center flex-col md:flex-row text-center py-60">
+      <div className="absolute top-0 right-0 px-4 md:px-8 py-2 md:py-4">
+        <Header />
+      </div>
+      <div>
+        <h1 className="text-4xl md:text-7xl pb-1 md:mb-3 font-bold drop-shadow-lg">
+          Hey! I'm Maks
+        </h1>
+        <p className="text-base md:text-xl mb-3 font-medium italic">
+          Backend Engineer, Software Developer and Tech Enthusiast
+        </p>
+        <p className="flex md:text-xl mb-3 font-medium max-w-xl">
+          With over 3 years of experience in backend development, I specialize
+          in building robust APIs and scalable systems that power seamless user
+          experiences.
+        </p>
+      </div>
+      <div className="flex justify-center">
+        <img
+          src="assets/wave.jpg"
+          alt="Circular cropped image"
+          className="rounded-full w-72 h-72 md:w-72 md:h-72 object-cover object-top"
+        />
+      </div>
+    </div>
+  );
 }
 
 export default Intro;
