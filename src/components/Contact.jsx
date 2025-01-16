@@ -3,12 +3,12 @@ import Title from "./Title";
 
 function Contact() {
   return (
-    <div id="contact-section" className="flex flex-col mx-10 mx-auto">
+    <div id="contact-section" className="flex flex-col mx-10 mx-auto lg:w-1/2">
       <div className="flex justify-center items-center py-3">
         <form
           action="https://getform.io/f/negA33bw"
           method="POST"
-          className="flex flex-col w-full sm:w-4/12"
+          className="flex flex-col w-full sm:w-10/12"
         >
           <Title>Contact</Title>
           <input
