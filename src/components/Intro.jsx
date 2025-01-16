@@ -22,7 +22,7 @@ function Intro() {
       </div>
       <div className="flex justify-center">
         <img
-          src="public/assets/wave.jpg"
+          src="assets/wave.jpg"
           alt="Circular cropped image"
           className="rounded-full w-72 h-72 md:w-72 md:h-72 object-cover object-top"
         />

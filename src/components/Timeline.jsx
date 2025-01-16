@@ -8,7 +8,7 @@ function Timeline() {
     <div className="flex flex-col md:flex-row justify-center items-center my-10">
       <div className="w-full md:w-2/12 flex justify-center items-center mb-10 md:mb-0">
         <img
-          src="public/assets/graphic.jpg"
+          src="assets/graphic.jpg"
           alt="WFH Illustration"
           className="w-1/3 md:w-full"
         />
