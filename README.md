@@ -7,6 +7,7 @@ This site is a brief showcase of my work, skills, and professional journey. Buil
 - **Portfolio Section**: A gallery of my recent projects, complete with images, descriptions, and the technologies used.
 - **Timeline Section**: A chronological display of my professional milestones, showcasing my growth and achievements over the years.
 - **Contact Section**: A simple and intuitive form for visitors to get in touch with me directly.
+- **Footer**: Links to my social media profiles and other relevant information.
 
 This portfolio is a reflection of my dedication to continuous learning and innovation in the tech field. I hope you enjoy exploring my work as much as I enjoyed creating it. Feel free to reach out through the contact form or connect with me on social media.
 
