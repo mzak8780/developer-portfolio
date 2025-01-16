@@ -35,6 +35,7 @@ export default [
     year: "2017",
     title:
       "Bachelor's Degree in Mechatronic Engineering and Project Management",
+    company: "The University of Sydney",
     duration: "5 Years",
     details:
       "I followed my intuition and my aspiration for problem solving by embarking on a double degree of mechatronic engineering and project management. I studied and applied various concepts of mechnical, electrical and computer engineering including mechatronic system design, software development and programming, control systems and mechanical systems. Analagously, I enhanced my understanding of project work, interlacing communication and agile methodologies such as stakeholder/resource management, quality assurance and leadership to maximise successful project execution.",
