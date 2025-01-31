@@ -10,7 +10,7 @@ function PortfolioItem({ title, imgUrl, stack, link }) {
           alt="project"
           className="w-full h-36 md:h-60 object-cover cursor-pointer"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="flex flex-wrap justify-center gap-2">
             {stack.map((item, index) => (
               <span

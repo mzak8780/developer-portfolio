@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className="absolute top-8 right-8">
       <button className="btn btn-outline text-white" onClick={scrollToContact}>
         Say Hello
       </button>

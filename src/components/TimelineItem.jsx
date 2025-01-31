@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 function TimelineItem({ year, title, company, duration, details }) {
   return (
     <ol className="flex flex-col md:flex-row relative border-l border-stone-300 p-2 md:p-4">
-      <li className="mb-10 md:mb-0 ml-4 md:ml-0">
+      <li className="mb-10 md:mb-0 ml-2 md:ml-0">
         <div className="absolute w-3 h-3 bg-stone-300 rounded-full mt-1.5 -left-1.5 border border-white" />
-        <p className="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm ">
+        <div className="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm">
           <span className="inline-block px-2 py-1 font-semibold text-white bg-neutral rounded-md">
             {year}
           </span>
@@ -16,8 +16,8 @@ function TimelineItem({ year, title, company, duration, details }) {
           <div className="my-1 text-sm font-normal leading-none text-stone-500">
             {duration}
           </div>
-          <p className="my-2 text-base font-normal">{details}</p>
-        </p>
+        </div>
+        <p className="my-2 text-base font-normal">{details}</p>
       </li>
     </ol>
   );

@@ -1,14 +1,15 @@
 import React from "react";
 import Title from "./Title";
+import Footer from "./Footer";
 
 function Contact() {
   return (
-    <div id="contact-section" className="flex flex-col mx-10 mx-auto lg:w-1/2">
-      <div className="flex justify-center items-center py-3">
+    <div className="flex flex-col items-center justify-center min-h-screen py-10 md:py-2 w-full">
+      <div className="w-full md:w-8/12 sm:w-10/12 px-4 md:px-0 text-center">
         <form
           action="https://getform.io/f/negA33bw"
           method="POST"
-          className="flex flex-col w-full sm:w-10/12"
+          className="flex flex-col w-full"
         >
           <Title>Contact</Title>
           <input
@@ -37,6 +38,7 @@ function Contact() {
           </button>
         </form>
       </div>
+      <Footer className="absolute bottom-0 w-full" />
     </div>
   );
 }

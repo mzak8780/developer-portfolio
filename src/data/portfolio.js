@@ -34,7 +34,15 @@ export default [
   {
     title: "Property Inspector",
     imgUrl: "/assets/prop-insp.jpg",
-    stack: ["TypeScript", "Vercel", "Supabase", "React", "daisyUI", "Tailwind"],
+    stack: [
+      "TypeScript",
+      "Vercel",
+      "Supabase",
+      "React",
+      "daisyUI",
+      "Tailwind",
+      "Next.js",
+    ],
     link: "",
   },
 ];
