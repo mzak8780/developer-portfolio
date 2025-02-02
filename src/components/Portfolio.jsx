@@ -10,7 +10,7 @@ function Portfolio() {
       <div>
         <Title>Recent Projects</Title>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center text-align:center pt-10">
+      <div className="flex flex-col md:flex-row items-center justify-center text-align:center">
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-16">
           {portfolio.map((project) => (
             <PortfolioItem
