@@ -9,7 +9,7 @@ function Footer() {
           href="https://www.linkedin.com/in/maks-zak/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-500 hover:text-gray-900"
+          className="text-gray-500 hover:text-white"
         >
           <FaLinkedin size={24} />
         </a>
@@ -17,12 +17,12 @@ function Footer() {
           href="https://github.com/mzak8780"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-500 hover:text-gray-900"
+          className="text-gray-500 hover:text-white"
         >
           <FaGithub size={24} />
         </a>
       </div>
-      <p className="text-sm mt-2 opacity-50">
+      <p className="text-sm mt-2 opacity-50 text-white">
         &copy; {new Date().getFullYear()} Maksymilian Zak. All rights reserved.
       </p>
     </div>

@@ -3,11 +3,12 @@ import Intro from "./components/Intro";
 import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
 import Timeline from "./components/Timeline";
+import Footer from "./components/Footer";
 import "./styles/App.css";
 
 function App() {
   return (
-    <div className="App" data-theme="cmyk">
+    <div className="App" data-theme="emerald">
       <div className="scroll-container">
         <section>
           <Intro />

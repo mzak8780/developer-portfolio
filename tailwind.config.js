@@ -9,6 +9,7 @@ export default {
     extend: {
       fontFamily: {
         ubter: ["inter"],
+        montserrat: ["Montserrat"],
       },
       screens: {
         sm: "420px",
@@ -50,6 +51,6 @@ export default {
       "dim",
       "nord",
       "sunset",
-    ], // Include the "valentine" theme
+    ],
   },
 };

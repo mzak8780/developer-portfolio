@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 
 function PortfolioItem({ title, imgUrl, stack, link }) {
   return (
-    <div className="relative border-2 border-gray-200 rounded-md overflow-hidden w-64">
+    <div className="relative rounded-md overflow-hidden w-78 border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
       <div className="relative group">
         <img
           src={imgUrl}
           alt="project"
           className="w-full h-36 md:h-60 object-cover cursor-pointer"
         />
-        <div className="inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="flex flex-wrap justify-center gap-2">
             {stack.map((item, index) => (
               <span

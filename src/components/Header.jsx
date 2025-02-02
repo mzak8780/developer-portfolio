@@ -10,7 +10,10 @@ const Header = () => {
 
   return (
     <header className="absolute top-8 right-8">
-      <button className="btn btn-outline text-white" onClick={scrollToContact}>
+      <button
+        className="btn btn-outline text-white hover:bg-neutral hover:text-white transition duration-200"
+        onClick={scrollToContact}
+      >
         Say Hello
       </button>
     </header>

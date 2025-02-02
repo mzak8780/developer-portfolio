@@ -2,15 +2,16 @@ import React from "react";
 import portfolio from "../data/portfolio";
 import PortfolioItem from "./PortfolioItem";
 import Title from "./Title";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Portfolio() {
   return (
-    <div>
-      <div className="flex flex-col sm:flex-row justify-center my-10">
-        <Title className="flex justify-center my-10">Recent Projects</Title>
+    <div className="flex flex-col justify-center items-center my-10 px-4">
+      <div>
+        <Title>Recent Projects</Title>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center text-align:center">
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-16">
+      <div className="flex flex-col md:flex-row items-center justify-center text-align:center pt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-16">
           {portfolio.map((project) => (
             <PortfolioItem
               key={project.title}
