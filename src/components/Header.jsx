@@ -9,9 +9,9 @@ const Header = () => {
   };
 
   return (
-    <header className="absolute top-8 right-8">
+    <header className="absolute top-8 right-8 z-10">
       <button
-        className="btn btn-outline text-white hover:bg-neutral hover:text-white transition duration-200"
+        className="btn btn-outline text-white hover:text-white transition duration-200"
         onClick={scrollToContact}
       >
         Say Hello

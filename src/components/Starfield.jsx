@@ -1,0 +1,125 @@
+import React, { useEffect } from "react";
+
+const Starfield = () => {
+  useEffect(() => {
+    const outerspace = document.querySelector("#outerspace");
+    const mainContext = outerspace.getContext("2d");
+
+    // Set canvas dimensions for higher resolution
+    const scaleFactor = window.devicePixelRatio || 1;
+    outerspace.width = outerspace.offsetWidth * scaleFactor;
+    outerspace.height = outerspace.offsetHeight * scaleFactor;
+    mainContext.scale(scaleFactor, scaleFactor);
+
+    const canvasWidth = outerspace.width / scaleFactor;
+    const canvasHeight = outerspace.height / scaleFactor;
+
+    const centerX = canvasWidth * 0.5;
+    const centerY = canvasHeight * 0.5;
+
+    const numberOfStars = 500;
+
+    const stars = [];
+
+    const frames_per_second = 144;
+
+    const interval = Math.floor(1000 / frames_per_second);
+    const startTime = performance.now();
+    let previousTime = startTime;
+
+    let currentTime = 0;
+    let deltaTime = 0;
+
+    class Star {
+      constructor() {
+        this.x = getRandomInt(-centerX, centerX);
+        this.y = getRandomInt(-centerY, centerY);
+        this.counter = getRandomInt(1, canvasWidth);
+
+        this.radiusMax = 1 + Math.random() * 10;
+        this.speed = getRandomInt(1, 5) / 50;
+
+        this.context = mainContext;
+      }
+
+      drawStar() {
+        this.counter -= this.speed;
+
+        if (this.counter < 1) {
+          this.counter = canvasWidth;
+          this.x = getRandomInt(-centerX, centerX);
+          this.y = getRandomInt(-centerY, centerY);
+
+          this.radiusMax = getRandomInt(1, 10);
+          this.speed = getRandomInt(1, 3) / 50;
+        }
+
+        const xRatio = this.x / this.counter;
+        const yRatio = this.y / this.counter;
+
+        const starX = remap(xRatio, 0, 1, 0, canvasWidth);
+        const starY = remap(yRatio, 0, 1, 0, canvasHeight);
+
+        this.radius = remap(this.counter, 0, canvasWidth, this.radiusMax, 0);
+
+        mainContext.beginPath();
+
+        mainContext.arc(starX, starY, this.radius, 0, Math.PI * 2, false);
+        mainContext.closePath();
+
+        mainContext.fillStyle = "#FFF";
+        mainContext.fill();
+      }
+    }
+
+    function setup() {
+      for (let i = 0; i < numberOfStars; i++) {
+        const star = new Star();
+        stars.push(star);
+      }
+    }
+    setup();
+
+    function draw(timestamp) {
+      currentTime = timestamp;
+      deltaTime = currentTime - previousTime;
+
+      if (deltaTime > interval) {
+        previousTime = currentTime - (deltaTime % interval);
+
+        mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
+        mainContext.fillStyle = "#111";
+        mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
+
+        mainContext.translate(centerX, centerY);
+
+        for (let i = 0; i < stars.length; i++) {
+          const star = stars[i];
+          star.drawStar();
+        }
+
+        mainContext.translate(-centerX, -centerY);
+      }
+
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function remap(value, from1, to1, from2, to2) {
+      return from2 + ((value - from1) * (to2 - from2)) / (to1 - from1);
+    }
+  }, []);
+
+  return (
+    <canvas
+      id="outerspace"
+      className="absolute top-0 left-0 w-full h-full z-0"
+    ></canvas>
+  );
+};
+
+export default Starfield;
