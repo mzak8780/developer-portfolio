@@ -1,7 +1,7 @@
 import React from "react";
 import Intro from "./components/Intro";
-import Contact from "./components/Contact";
-import Portfolio from "./components/Portfolio";
+import Contact from "./components/contact";
+import Portfolio from "./components/portfolio";
 import Timeline from "./components/Timeline";
 import "./styles/App.css";
 
