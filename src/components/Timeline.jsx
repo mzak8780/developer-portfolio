@@ -14,7 +14,7 @@ function Timeline() {
         />
       </div>
       <div className="w-full md:w-3/4">
-        <Title>Timeline</Title>
+        <Title id="timeline-title">Timeline</Title>
         {timeline.map((project) => (
           <TimelineItem
             key={project.title}
