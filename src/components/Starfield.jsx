@@ -138,7 +138,7 @@ const Starfield = () => {
   return (
     <canvas
       id="outerspace"
-      className="absolute top-0 left-0 w-full h-full z-20"
+      className="absolute top-0 left-0 w-full h-full z-0"
     ></canvas>
   );
 };
