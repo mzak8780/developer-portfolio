@@ -32,3 +32,66 @@ section {
     scroll-snap-align: start;
   }
 }
+
+.moon-cutout {
+  position: absolute;
+  top: 75%;
+  left: -75%;
+  width: 200vw;
+  height: 200vh;
+  background-color: white;
+  border-radius: 50% 50% 0 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Crater 1 */
+.moon-cutout::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  top: 5%;
+  left: 20%;
+  box-shadow: 0 0 0 10px #f0f0f0, 0 0 0 20px #e0e0e0;
+}
+
+/* Crater 2 */
+.moon-cutout::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  top: 10%;
+  left: 50%;
+  box-shadow: 0 0 0 6px #f0f0f0, 0 0 0 12px #e0e0e0;
+}
+
+/* Additional Craters */
+.moon-cutout .crater {
+  position: absolute;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+}
+
+/* Crater 3 */
+.moon-cutout .crater-3 {
+  width: 40px;
+  height: 40px;
+  top: 3%;
+  left: 35%;
+  box-shadow: 0 0 0 8px #f0f0f0, 0 0 0 16px #e0e0e0;
+}
+
+/* Crater 4 */
+.moon-cutout .crater-4 {
+  width: 20px;
+  height: 20px;
+  top: 7%;
+  left: 65%;
+  box-shadow: 0 0 0 4px #f0f0f0, 0 0 0 8px #e0e0e0;
+}

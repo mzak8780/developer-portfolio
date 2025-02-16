@@ -12,7 +12,7 @@ function Contact() {
           method="POST"
           className="flex flex-col w-full"
         >
-          <Title>Contact</Title>
+          <Title id="contact-title">Contact</Title>
           <input
             type="text"
             name="name"
@@ -39,7 +39,7 @@ function Contact() {
           </button>
         </form>
       </div>
-      <Footer className="w-full z-10" />
+      <Footer className="w-full" />
     </div>
   );
 }
