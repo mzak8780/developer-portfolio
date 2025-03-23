@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 
-const Starfield = () => {
+const Starfield = ({ id }) => {
   useEffect(() => {
-    const outerspace = document.querySelector("#outerspace");
+    const outerspace = document.querySelector(`#${id}`);
     const mainContext = outerspace.getContext("2d");
 
     const scaleFactor = window.devicePixelRatio || 1;
@@ -133,14 +134,17 @@ const Starfield = () => {
     return () => {
       window.removeEventListener("resize", resizeCanvas);
     };
-  }, []);
+  }, [id]);
 
   return (
     <canvas
-      id="outerspace"
+      id={id}
       className="absolute top-0 left-0 w-full h-full z-0"
     ></canvas>
   );
+};
+Starfield.propTypes = {
+  id: PropTypes.string.isRequired,
 };
 
 export default Starfield;

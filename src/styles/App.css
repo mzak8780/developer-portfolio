@@ -33,65 +33,67 @@ section {
   }
 }
 
-.moon-cutout {
+.moon-cutout-top {
   position: absolute;
   top: 75%;
   left: -75%;
-  width: 200vw;
-  height: 200vh;
-  background-color: white;
+  width: 250vw;
+  height: 250vh;
+  background-color: whitesmoke;
   border-radius: 50% 50% 0 0;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 }
 
-/* Crater 1 */
-.moon-cutout::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
+.crater {
+  position: relative;
   background-color: #e0e0e0;
   border-radius: 50%;
-  top: 5%;
-  left: 20%;
-  box-shadow: 0 0 0 10px #f0f0f0, 0 0 0 20px #e0e0e0;
+  z-index: 10;
 }
 
-/* Crater 2 */
-.moon-cutout::after {
-  content: "";
-  position: absolute;
-  width: 30px;
+.crater-1 {
+  width: 150px;
   height: 30px;
-  background-color: #e0e0e0;
-  border-radius: 50%;
-  top: 10%;
-  left: 50%;
-  box-shadow: 0 0 0 6px #f0f0f0, 0 0 0 12px #e0e0e0;
+  top: 1%;
+  left: 40%;
+  border-radius: 50% / 50%;
+  transform: rotate(-7deg);
+  box-shadow: inset -3px -10px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Additional Craters */
-.moon-cutout .crater {
-  position: absolute;
-  background-color: #e0e0e0;
-  border-radius: 50%;
-}
-
-/* Crater 3 */
-.moon-cutout .crater-3 {
-  width: 40px;
+.crater-2 {
+  width: 160px;
   height: 40px;
   top: 3%;
-  left: 35%;
-  box-shadow: 0 0 0 8px #f0f0f0, 0 0 0 16px #e0e0e0;
+  left: 60%;
+  border-radius: 50% / 50%;
+  transform: rotate(10deg);
+  box-shadow: inset 10px -10px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Crater 4 */
-.moon-cutout .crater-4 {
-  width: 20px;
+.crater-3 {
+  width: 280px;
+  height: 70px;
+  top: 3%;
+  left: 45%;
+  border-radius: 50% / 50%;
+  box-shadow: inset 2px -10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.crater-4 {
+  width: 80px;
   height: 20px;
-  top: 7%;
-  left: 65%;
-  box-shadow: 0 0 0 4px #f0f0f0, 0 0 0 8px #e0e0e0;
+  top: 1%;
+  left: 40%;
+  border-radius: 50% / 50%;
+  transform: rotate(-7deg);
+}
+
+.crater-5 {
+  width: 25px;
+  height: 25px;
+  top: 40%;
+  left: 70%;
+  border-radius: 50%;
 }
