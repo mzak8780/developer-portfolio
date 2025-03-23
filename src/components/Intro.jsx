@@ -5,7 +5,7 @@ import Starfield from "./Starfield";
 
 function Intro() {
   return (
-    <div className="relative flex text-primary items-center justify-center flex-col md:flex-row text-left py-32 md:py-72 w-full md:h-screen px-4 z-10">
+    <div className="relative flex text-white items-center justify-center flex-col md:flex-row text-left py-32 md:py-72 w-full md:h-screen px-4 z-10">
       <Header />
       <Starfield id="intro-starfield" />
       <div className="mb-16 md:mb-0 md:mr-16 px-4 md:px-0 mt-10 md:mt-0 z-10">
