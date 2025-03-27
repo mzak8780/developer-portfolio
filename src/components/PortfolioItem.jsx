@@ -55,4 +55,4 @@ PortfolioItem.propTypes = {
   link: PropTypes.string,
 };
 
-export default Portfoliotem;
+export default PortfolioItem;
