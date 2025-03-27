@@ -16,9 +16,8 @@ function Intro() {
           I like building things.
         </p>
         <p className="flex md:text-xl mb-3 font-medium max-w-xl">
-          I'm a software engineer specializing in creating custom client
-          solutions and integrations to enhance business processes and drive
-          efficiency.
+          Full-stack developer passionate about building web applications that
+          solve real-world problems.
         </p>
       </div>
       <div className="flex justify-center px-4 md:px-0">

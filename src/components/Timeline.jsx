@@ -27,7 +27,7 @@ function Timeline() {
         ))}
         <div className="flex justify-center mt-10">
           <a
-            href="MaksymilianZak.pdf"
+            href="MaksymilianZak_25.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-wide bg-base-content text-center inline-block px-8 py-3 w-max text-base text-white font-medium rounded-md bg-gradient-to-r drop-shadow-md"

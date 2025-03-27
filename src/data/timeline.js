@@ -1,9 +1,14 @@
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().getMonth() + 1; // Months are 0-indexed
+
 export default [
   {
     year: "Today",
     title: "Salesforce Developer",
     company: "Data#3",
-    duration: "7 months",
+    duration: `${Math.ceil(
+      (currentYear - 2024) * 12 + currentMonth - 6
+    )} months`,
     details:
       "At Data#3, I continue delivering tailored Salesforce solutions by leveraging Apex and software development expertise to deploy scalable services. I focus on system optimization, data integrity, and user experience improvements. This role has allowed me to take greater ownership of solutions, driving impactful outcomes and enhancing my technical and consulting skills.",
   },

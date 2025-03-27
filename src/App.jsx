@@ -7,15 +7,15 @@ import "./styles/App.css";
 
 function App() {
   return (
-    <div className="App" data-theme="emerald">
+    <div className="App" data-theme="lofi">
       <div className="scroll-container">
         <section>
           <Intro />
         </section>
-        <section>
+        <section id="project-section">
           <Portfolio />
         </section>
-        <section>
+        <section id="timeline-section">
           <Timeline />
         </section>
         <section id="contact-section">
