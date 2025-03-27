@@ -7,7 +7,7 @@ import "./styles/App.css";
 
 function App() {
   return (
-    <div className="App" data-theme="lofi">
+    <div className="App" data-theme="bumblebee">
       <div className="scroll-container">
         <section>
           <Intro />

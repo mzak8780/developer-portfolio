@@ -24,7 +24,7 @@ function Intro() {
         <img
           src="assets/wave.jpg"
           alt="Rounded square cropped image"
-          className="rounded-lg w-60 h-60 md:w-80 md:h-80 object-cover object-top shadow-lg z-10"
+          className="rounded-full w-60 h-60 md:w-80 md:h-80 object-cover object-top shadow-lg z-10"
         />
       </div>
       <div className="moon-cutout-top absolute top-3/4 -left-3/4 w-[250vw] h-[250vh] bg-red rounded-t-full z-0">

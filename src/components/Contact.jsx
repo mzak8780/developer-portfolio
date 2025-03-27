@@ -5,7 +5,7 @@ import Starfield from "./Starfield";
 
 function Contact() {
   return (
-    <div className="relative flex flex-col items-center justify-between min-h-screen py-10 md:py-2 w-full bg-neutral ">
+    <div className="relative flex flex-col items-center justify-between min-h-screen py-10 md:py-2 w-full">
       <div className="absolute bottom-1/4 -left-3/4 w-[250vw] h-[250vh] bg-white rounded-b-full z-10"></div>
       <div className="w-full md:w-8/12 sm:w-10/12 px-4 md:px-0 text-center z-10 pt-20">
         <form
