@@ -4,37 +4,45 @@ const currentMonth = new Date().getMonth() + 1; // Months are 0-indexed
 export default [
   {
     year: "Today",
-    title: "Salesforce Developer",
+    title: "Software Developer",
     company: "Data#3",
     duration: `${Math.ceil(
       (currentYear - 2024) * 12 + currentMonth - 6
     )} months`,
     details:
-      "At Data#3, I continue delivering tailored Salesforce solutions by leveraging Apex and software development expertise to deploy scalable services. I focus on system optimization, data integrity, and user experience improvements. This role has allowed me to take greater ownership of solutions, driving impactful outcomes and enhancing my technical and consulting skills.",
+      "At Data#3, I develop and deploy scalable backend solutions using object-oriented programming principles and modern web technologies. I focus on optimizing system performance, ensuring data integrity, and integrating RESTful APIs to enhance interoperability. Collaborating in Agile teams, I align technical solutions with business objectives to drive impactful outcomes.",
+  },
+  {
+    year: "2024",
+    title: "CRM Lead - Senior Analyst",
+    company: "Accenture",
+    duration: "6 months",
+    details:
+      "Led the development and support of CRM systems, managing multiple production applications to ensure reliability and performance. Optimized data integrity and performance by designing scalable data distribution strategies and managing relational databases. Engaged with senior stakeholders to translate business objectives into scalable software solutions, standardizing development workflows for efficiency.",
   },
   {
     year: "2023",
-    title: "Senior Analyst/Salesforce Developer",
+    title: "Software Developer - Senior Analyst",
     company: "Accenture",
     duration: "1.75 years",
     details:
-      "I designed, tested, and implemented custom Salesforce solutions while deploying through package-based development and CI/CD practices. I led a small team maintaining a financial client's Salesforce ecosystem and engaged in agile project management using Confluence and Jira. I also onboarded new developers and led an introductory workshop on Salesforce development.",
+      "Developed and maintained a customized SaaS cloud solution supporting over 2,000 users across multiple countries. Built backend functionality with modular, scalable logic and integrated third-party services to extend system capabilities. Enhanced system reliability using event-driven architecture and automated deployment processes for faster, more reliable releases.",
   },
   {
     year: "2022",
-    title: "Analyst/Salesforce Developer",
+    title: "Software Developer - Analyst",
     company: "Accenture",
     duration: "8 months",
     details:
-      "I joined the Salesforce practice as a Developer, contributing to a SaaS solution rollout across seven countries in Southeast Asia. I quickly adapted to IT consulting and earned a promotion within eight months.",
+      "Contributed to an international SaaS project, gaining hands-on experience with development best practices, security models, and data management strategies. Supported ongoing development and maintenance through bug fixes, enhancements, and test case creation.",
   },
   {
     year: "2021",
     title: "Technical Service Professional",
     company: "Macquarie Telecom",
-    duration: "4 Months",
+    duration: "4 months",
     details:
-      "In my first IT role, I acted as the first point of contact for resolving nationwide connectivity issues. I applied network and cloud fundamentals to real-world scenarios.",
+      "Acted as the first point of contact for resolving nationwide connectivity issues, applying network and cloud fundamentals to real-world scenarios. Developed foundational skills in troubleshooting and customer service within the IT sector.",
   },
   {
     year: "2017",
