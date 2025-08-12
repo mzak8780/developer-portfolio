@@ -6,13 +6,6 @@ import Title from "./Title";
 function Timeline() {
     return (
         <div className="flex flex-col md:flex-row justify-center items-center my-10 px-4">
-            <div className="w-full md:w-1/4 flex justify-center items-center mb-10 md:mb-0 ">
-                <img
-                    src="assets/graphic.jpg"
-                    alt="WFH Illustration"
-                    className="w-1/3 md:w-full"
-                />
-            </div>
             <div className="w-full md:w-3/4">
                 <Title id="timeline-title">Timeline</Title>
                 {timeline.map((project) => (
@@ -30,7 +23,7 @@ function Timeline() {
                         href="MaksZak_25.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-wide bg-base-content text-center inline-block px-8 py-3 w-max text-base text-white font-medium rounded-md bg-gradient-to-r drop-shadow-md"
+                        className="primary-button"
                     >
                         Download Full Resume
                     </a>

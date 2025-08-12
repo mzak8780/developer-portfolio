@@ -2,38 +2,105 @@ import React from "react";
 import "animate.css";
 import Header from "./Header";
 import Starfield from "./Starfield";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 function Intro() {
-  return (
-    <div className="relative flex text-white items-center justify-center flex-col md:flex-row text-left py-32 md:py-72 w-full md:h-screen px-4 z-10">
-      <Header />
-      <Starfield id="intro-starfield" />
-      <div className="mb-16 md:mb-0 md:mr-16 px-4 md:px-0 mt-10 md:mt-0 z-10">
-        <h1 className="text-4xl md:text-7xl pb-1 md:mb-3 font-bold drop-shadow-lg text-red animate__animated animate__fadeIn">
-          Hey! I'm Maks
-        </h1>
-        <p className="text-base md:text-2xl mb-3 font-medium">
-          I like building things.
-        </p>
-        <p className="flex md:text-xl mb-3 font-medium max-w-xl">
-          Full-stack developer passionate about building web applications that
-          solve real-world problems.
-        </p>
-      </div>
-      <div className="flex justify-center px-4 md:px-0">
-        <img
-          src="assets/wave.jpg"
-          alt="Rounded square cropped image"
-          className="rounded-full w-60 h-60 md:w-80 md:h-80 object-cover object-top shadow-lg z-10"
-        />
-      </div>
-      <div className="moon-cutout-top absolute top-3/4 -left-3/4 w-[250vw] h-[250vh] bg-red rounded-t-full z-0">
-        <div className="crater crater-2"></div>
-        <div className="crater crater-1"></div>
-        <div className="crater crater-3"></div>
-      </div>
-    </div>
-  );
+    const scrollToContact = () => {
+        const contactSection = document.getElementById("contact-section");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    const scrollToProjects = () => {
+        const contactSection = document.getElementById("project-section");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    return (
+        <div className="relative flex text-white items-center justify-center flex-col md:flex-row text-left py-24 md:py-72 w-full md:h-screen px-4 z-10 border border-slate-700">
+            <Header />
+            <Starfield id="intro-starfield" />
+            <div className="flex-1 mb-8 lg:mr-16 mt-10 lg:mt-0 z-10 max-w-2xl">
+                {/* <div className="mb-6">
+                    <span className="inline-block px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-medium mb-4 border border-emerald-500/30">
+                        👋 Available for opportunities
+                    </span>
+                </div> */}
+
+                <h1 className="font-space-grotesk text-5xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
+                    Hey! I'm{" "}
+                    <span className="bg-gradient-to-r from-emerald-700 to-emerald-200 bg-clip-text text-transparent">
+                        Maks
+                    </span>
+                </h1>
+
+                <p className="text-xl lg:text-2xl mb-6 text-slate-200 font-medium">
+                    I build digital experiences that matter.
+                </p>
+
+                <p className="text-lg lg:text-xl mb-8 text-slate-200 leading-relaxed max-w-xl">
+                    Full-stack software engineer passionate about creating web
+                    applications that solve real-world problems with clean code
+                    and thoughtful design.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                    <button
+                        onClick={scrollToProjects}
+                        className="primary-button"
+                    >
+                        View My Work
+                    </button>
+                    <button
+                        onClick={scrollToContact}
+                        className="inline-flex items-center justify-center px-8 py-4 border-2 border-slate-600 text-slate-300 font-semibold rounded-lg hover:border-slate-500 hover:text-white transition-all duration-300 glow-green"
+                    >
+                        Get In Touch
+                    </button>
+                    <div className="flex items-center gap-2">
+                        <a
+                            href="https://github.com/mzak8780"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            <button className="primary-button">
+                                <FiGithub className="h-5 w-5" />
+                                <span className="sr-only">GitHub</span>
+                            </button>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/maks-zak/"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            <button className="primary-button">
+                                <FiLinkedin className="h-5 w-5" />
+                                <span className="sr-only">LinkedIn</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div className="flex justify-center lg:justify-end z-10">
+                <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-700 rounded-full blur-xl opacity-30 animate-pulse"></div>
+                    <img
+                        src="/assets/portrait-removebg-preview.png"
+                        alt="Maks - Full Stack Developer"
+                        className="relative rounded-full w-72 h-72 lg:w-96 lg:h-96 object-cover object-top shadow-2xl float-animation border-2"
+                    />
+                </div>
+            </div>
+            <div className="moon-cutout-top absolute top-3/4 -left-3/4 w-[250vw] h-[250vh] bg-red rounded-t-full z-0">
+                - <div className="crater crater-2"></div>
+                <div className="crater crater-1"></div>
+                <div className="crater crater-3"></div>
+            </div>
+        </div>
+    );
 }
 
 export default Intro;
