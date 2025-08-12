@@ -6,30 +6,21 @@ const Starfield = ({ id }) => {
         const outerspace = document.querySelector(`#${id}`);
         const mainContext = outerspace.getContext("2d");
 
-        let scaleFactor = window.devicePixelRatio || 1;
-        let canvasWidth = 0;
-        let canvasHeight = 0;
-        let centerX = 0;
-        let centerY = 0;
+        const scaleFactor = window.devicePixelRatio || 1;
 
-        function resizeCanvas() {
-            scaleFactor = window.devicePixelRatio || 1;
-            // Set display size (css pixels)
-            outerspace.style.width = window.innerWidth + "px";
-            outerspace.style.height = window.innerHeight + "px";
-            // Set actual size in memory (scaled to device pixel ratio)
-            outerspace.width = Math.round(window.innerWidth * scaleFactor);
-            outerspace.height = Math.round(window.innerHeight * scaleFactor);
-            // Reset transform (no scaling)
-            mainContext.setTransform(1, 0, 0, 1, 0, 0);
-
-            canvasWidth = window.innerWidth;
-            canvasHeight = window.innerHeight;
-            centerX = canvasWidth * 0.5;
-            centerY = canvasHeight * 0.5;
-        }
+        const resizeCanvas = () => {
+            outerspace.width = window.innerWidth * scaleFactor;
+            outerspace.height = window.innerHeight * scaleFactor;
+            mainContext.scale(scaleFactor, scaleFactor);
+        };
 
         resizeCanvas();
+
+        let canvasWidth = window.innerWidth;
+        let canvasHeight = window.innerHeight;
+
+        let centerX = canvasWidth * 0.5;
+        let centerY = canvasHeight * 0.5;
 
         const numberOfStars = 500;
 
@@ -68,7 +59,6 @@ const Starfield = ({ id }) => {
                     this.speed = getRandomInt(1, 3) / 30;
                 }
 
-                // Use the latest canvasWidth/canvasHeight for drawing
                 const xRatio = this.x / this.counter;
                 const yRatio = this.y / this.counter;
 
@@ -146,17 +136,16 @@ const Starfield = ({ id }) => {
             return from2 + ((value - from1) * (to2 - from2)) / (to1 - from1);
         }
 
-        // Use a named function for cleanup
-        function handleResize() {
+        window.addEventListener("resize", () => {
             resizeCanvas();
-        }
-        window.addEventListener("resize", handleResize);
-
-        // Also update canvasWidth/centerX/centerY for stars on resize
-        // (re-initialize stars if needed)
+            canvasWidth = window.innerWidth;
+            canvasHeight = window.innerHeight;
+            centerX = canvasWidth * 0.5;
+            centerY = canvasHeight * 0.5;
+        });
 
         return () => {
-            window.removeEventListener("resize", handleResize);
+            window.removeEventListener("resize", resizeCanvas);
         };
     }, [id]);
 
