@@ -20,12 +20,11 @@ const Starfield = ({ id }) => {
             // Set actual size in memory (scaled to device pixel ratio)
             outerspace.width = Math.round(window.innerWidth * scaleFactor);
             outerspace.height = Math.round(window.innerHeight * scaleFactor);
-            // Reset transform before scaling
+            // Reset transform (no scaling)
             mainContext.setTransform(1, 0, 0, 1, 0, 0);
-            mainContext.scale(scaleFactor, scaleFactor);
-            // Use the actual canvas size in memory for drawing
-            canvasWidth = outerspace.width / scaleFactor;
-            canvasHeight = outerspace.height / scaleFactor;
+
+            canvasWidth = window.innerWidth;
+            canvasHeight = window.innerHeight;
             centerX = canvasWidth * 0.5;
             centerY = canvasHeight * 0.5;
         }
