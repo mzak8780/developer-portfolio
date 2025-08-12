@@ -23,8 +23,9 @@ const Starfield = ({ id }) => {
             // Reset transform before scaling
             mainContext.setTransform(1, 0, 0, 1, 0, 0);
             mainContext.scale(scaleFactor, scaleFactor);
-            canvasWidth = window.innerWidth;
-            canvasHeight = window.innerHeight;
+            // Use the actual canvas size in memory for drawing
+            canvasWidth = outerspace.width / scaleFactor;
+            canvasHeight = outerspace.height / scaleFactor;
             centerX = canvasWidth * 0.5;
             centerY = canvasHeight * 0.5;
         }
@@ -68,6 +69,7 @@ const Starfield = ({ id }) => {
                     this.speed = getRandomInt(1, 3) / 30;
                 }
 
+                // Use the latest canvasWidth/canvasHeight for drawing
                 const xRatio = this.x / this.counter;
                 const yRatio = this.y / this.counter;
 
@@ -150,6 +152,9 @@ const Starfield = ({ id }) => {
             resizeCanvas();
         }
         window.addEventListener("resize", handleResize);
+
+        // Also update canvasWidth/centerX/centerY for stars on resize
+        // (re-initialize stars if needed)
 
         return () => {
             window.removeEventListener("resize", handleResize);
