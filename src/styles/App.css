@@ -101,8 +101,44 @@ section {
     width: 25px;
     height: 25px;
     top: 40%;
-    left: 70%;
+    left: 90%;
     border-radius: 50%;
+}
+
+.crater-6 {
+    width: 180px;
+    height: 180px;
+    top: 15%;
+    left: 95%;
+    border-radius: 50% / 50%;
+    box-shadow: inset 4px -5px 30px rgba(0, 0, 0, 0.4);
+}
+
+.crater-7 {
+    width: 320px;
+    height: 320px;
+    top: 45%;
+    left: -30%;
+    border-radius: 50% / 50%;
+    box-shadow: inset 4px -20px 60px rgba(0, 0, 0, 0.7);
+}
+
+.crater-8 {
+    width: 240px;
+    height: 240px;
+    top: 95%;
+    left: 95%;
+    border-radius: 50% / 50%;
+    box-shadow: inset 4px -15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.crater-9 {
+    width: 240px;
+    height: 240px;
+    top: 95%;
+    left: 95%;
+    border-radius: 50% / 50%;
+    box-shadow: inset 4px -5px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Floating animation */

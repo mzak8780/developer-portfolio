@@ -92,8 +92,8 @@ function Intro() {
                     />
                 </div>
             </div>
-            <div className="moon-cutout-top absolute top-3/4 -left-3/4 w-[250vw] h-[250vh] bg-red rounded-t-full z-0">
-                - <div className="crater crater-2"></div>
+            <div className="moon-cutout-top absolute top-3/4 -left-3/4 w-[250vw] h-[250vh] rounded-t-full z-0">
+                <div className="crater crater-2"></div>
                 <div className="crater crater-1"></div>
                 <div className="crater crater-3"></div>
             </div>
