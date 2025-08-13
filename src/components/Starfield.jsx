@@ -9,13 +9,14 @@ const Starfield = ({ id }) => {
         const scaleFactor = window.devicePixelRatio || 1;
 
         const resizeCanvas = () => {
-            outerspace.width = window.innerWidth * scaleFactor;
-            outerspace.height = window.innerHeight * scaleFactor;
+            outerspace.width = window.innerWidth;
+            outerspace.height = window.innerHeight;
             mainContext.scale(scaleFactor, scaleFactor);
         };
 
         resizeCanvas();
 
+        // TODO: UPDATE FOR MOBILE
         let canvasWidth = window.innerWidth;
         let canvasHeight = window.innerHeight;
 
