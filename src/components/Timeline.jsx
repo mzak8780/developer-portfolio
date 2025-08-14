@@ -5,8 +5,13 @@ import Title from "./Title";
 
 function Timeline() {
     return (
-        <div className="flex flex-col md:flex-row justify-center items-center my-10 px-4">
-            <div className="w-full md:w-3/4">
+        <div className="flex flex-col md:flex-row justify-center items-center my-10 px-4 relative">
+            {/* Crater background effect */}
+            <div className="absolute top-0 left-0 z-0 pointer-events-none w-full h-full">
+                <div className="crater crater-9 absolute"></div>
+                <div className="crater crater-10 absolute"></div>
+            </div>
+            <div className="w-full md:w-3/4 relative z-10">
                 <Title id="timeline-title">Timeline</Title>
                 {timeline.map((project) => (
                     <TimelineItem
