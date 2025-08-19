@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 import { Code } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { ExternalLink } from "react-feather";
 
-function PortfolioItem({ title, imgUrl, stack, link, index }) {
+function PortfolioItem({ title, imgUrl, description, stack, link, index }) {
+    const isGithub = link && link.includes("github.com");
+
     return (
         <div className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden card-hover transition-all duration-300 hover:border-gray-300 shadow-lg">
             <div className="relative overflow-hidden">
@@ -18,6 +21,8 @@ function PortfolioItem({ title, imgUrl, stack, link, index }) {
                 <h3 className="text-xl md:text-2xl font-space-grotesk font-bold text-gray-800 mb-3 group-hover:text-emerald-600 transition-colors duration-300">
                     {title}
                 </h3>
+
+                <p className="text-gray-600 mb-4 text-base">{description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                     {stack.map((item, stackIndex) => (
@@ -40,8 +45,19 @@ function PortfolioItem({ title, imgUrl, stack, link, index }) {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <FaGithub size={16} className="mr-2" />
-                            View Code
+                            {" "}
+                            {isGithub ? (
+                                <>
+                                    {" "}
+                                    <FaGithub size={16} className="mr-2" />
+                                    View Code{" "}
+                                </>
+                            ) : (
+                                <>
+                                    <ExternalLink size={16} className="mr-2" />
+                                    Go to Site
+                                </>
+                            )}
                         </a>
                     ) : (
                         <button className="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-600 font-semibold rounded-lg cursor-not-allowed text-sm">

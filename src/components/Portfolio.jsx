@@ -25,6 +25,7 @@ function Portfolio() {
                     <PortfolioItem
                         key={project.title}
                         imgUrl={project.imgUrl}
+                        description={project.description}
                         title={project.title}
                         stack={project.stack}
                         link={project.link}
