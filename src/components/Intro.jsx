@@ -87,7 +87,7 @@ function Intro() {
                     <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-700 rounded-full blur-xl opacity-30 animate-pulse"></div>
                     <img
                         src="/assets/portrait-removebg-preview.png"
-                        alt="Maks - Full Stack Developer"
+                        alt="Maks - Full Stack Engineer"
                         className="relative rounded-full w-72 h-72 lg:w-96 lg:h-96 object-cover object-top shadow-2xl float-animation border-2"
                     />
                 </div>

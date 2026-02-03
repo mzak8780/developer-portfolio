@@ -14,9 +14,7 @@ function Portfolio() {
             <div className="text-center mb-16 relative z-10">
                 <Title id="projects-title">Featured Projects</Title>
                 <p className="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
-                    full-stack development, from web applications to hardware A
-                    collection of projects that showcase my skills in
-                    integrations.
+                    Some things I've worked on.
                 </p>
             </div>
 
